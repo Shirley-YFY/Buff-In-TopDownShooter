@@ -134,7 +134,7 @@ public class AoeState : MonoBehaviour{
         }//aoe.param;
         this.caster = aoe.caster;
         this.propWhileCreate = aoe.caster ? aoe.caster.GetComponent<ChaState>().property : ChaProperty.zero;
-        
+
         this.transform.position = aoe.position;
         this.transform.eulerAngles.Set(0, aoe.degree, 0);
 
@@ -148,7 +148,7 @@ public class AoeState : MonoBehaviour{
                 Quaternion.identity,
                 viewContainer.transform
             );
-            
+
             aoeEffect.transform.localPosition = new Vector3(0, this.gameObject.transform.position.y, 0);
             aoeEffect.transform.localRotation = Quaternion.identity;
         }
